@@ -6,7 +6,7 @@ import Movies from "./pages/Movies.jsx";
 import Listings from "./pages/Listings.jsx";
 import About from "./pages/About.jsx";
 import Forum from "./pages/Forum.jsx";
-import Contact from "./page/Contact.jsx";
+import Contact from "./pages/Contact.jsx";
 import Screens from "./pages/Screens.jsx";
 
 const Main = () => {
