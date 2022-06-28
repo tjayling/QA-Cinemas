@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/home.js";
-import Movies from "./pages/movies.js";
-import Listings from "./pages/listings.js";
+import Home from "./pages/Home.jsx";
+import Movies from "./pages/Movies.jsx";
+import Listings from "./pages/Listings.jsx";
 
 const Main = () => {
   return (
