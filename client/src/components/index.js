@@ -1,4 +1,4 @@
-import Logo from "./Logo.jsx";
+import Header from "./Header.jsx";
 import NavBar from "./NavBar.jsx";
 
-export { Logo, NavBar };
+export { NavBar, Header};

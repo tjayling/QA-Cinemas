@@ -1,21 +1,16 @@
-import React, { Component } from "react";
-import Styled from "styled-components";
+import React from "react";
 import Logo from "./Logo";
-// import Links from "./Links";
+import Links from "./Links";
 
-const Container = Styled.div.attrs({ className: "nav-container" });
-const Nav = Styled.nav.attrs({
-  className: "navbar navbar-expand-lg navbar-dark bg-dark",
-});
-
-const NavBar = () => {
+function NavBar() {
   return (
-    <Container>
-      <Nav>
+    <div className={"nav-container"}>
+      <nav className={"navbar navbar-expand-lg navbar-dark bg-dark"}>
         <Logo />
-      </Nav>
-    </Container>
+        <Links />
+      </nav>
+    </div>
   );
-};
+}
 
 export default NavBar;

@@ -1,15 +1,19 @@
 import React, { Component } from "react";
-import Styled from "styled-components";
-import logo from "../logo.svg";
-
-const Wrapper = Styled.a.attrs({ className: "navbar-brand" });
+// import logo from "../logo.svg";
+import logo from "../img/logo-icon250.png";
 
 class Logo extends Component {
   render() {
     return (
-      <Wrapper href={"/home"}>
-        <img src={logo} width={"50"} height={"50"} alt={"Home page"} />
-      </Wrapper>
+      <a className={"navbar-brand"} href={"/home"}>
+        <img
+          src={logo}
+          width={30}
+          height={30}
+          alt={"Home page"}
+          style={{ filter: "invert(1)", marginLeft: "10px" }}
+        />
+      </a>
     );
   }
 }
