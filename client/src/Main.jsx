@@ -9,9 +9,9 @@ const Main = () => {
   return (
     <div>
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/movies" component={Movies} />
-        <Route exact path="/listings" component={Listings} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/movies" element={<Movies />} />
+        <Route exact path="/listings" element={<Listings />} />
       </Routes>
     </div>
   );
