@@ -1,7 +1,4 @@
 import React from "react";
-import {useState} from 'react';
-
-
 
 
 const Contact = () => {
@@ -10,31 +7,25 @@ const Contact = () => {
     <p>Welcome to our contact page, here you can contact us for any inquires</p>
 
     <h2>Contact us via email</h2>
-    <form id ="Cameraform">
+    <form action="https://formsubmit.co/87393ec81fcbba0211622f33c93f1126" method="POST">
     <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name.."></input>
+      <input type="text" placeholder="Your name.." ></input>
   
       <label for="lname">Last Name</label>
       <input type="text" id="lname" name="lastname" placeholder="Your last name.."></input>
 
       <label for="email">Email</label>
-      <input type="text" id="email" name="emailadd" placeholder="Your email address..."></input>
+      <input type="email" name="email" placeholder="Your email address..." ></input>
 
       <label for="subject">Subject</label>
-      <select id="subject" name="subject">
-        <option value="movie">Movie</option>
-        <option value="bookings">Bookings</option>
-        <option value="complaint">Complaint</option>
-        <option value="other">Other</option>
-      </select>
+      <input type="hidden" name="_subject" value="New submission!"></input>
+  
 
       <label for="Content">Enter Content: </label>
       <input type="textarea" name="textValue" placeholder="Enter content here"></input>
   
   
-      <input type="submit" value="Submit"></input>
-
-
+      <button type="submit">Send</button>
      </form>           
     <h2>Contact via mail</h2>
     <p>123 oneroad</p>
@@ -49,3 +40,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
