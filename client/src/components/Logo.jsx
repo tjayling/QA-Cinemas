@@ -1,19 +1,24 @@
 import React, { Component } from "react";
 // import logo from "../logo.svg";
-import logo from "../img/logo-icon250.png";
+import logo from "../img/logo500.png";
 
 class Logo extends Component {
+  constructor(props) {
+    super(props);
+    this.height = props.height;
+    this.style = props.style;
+  }
+
   render() {
     return (
-      <a className={"navbar-brand"} href={"/home"}>
+      <div className={"navbar-brand"} href={"/home"}>
         <img
           src={logo}
-          width={30}
-          height={30}
+          height={this.height}
           alt={"Home page"}
-          style={{ filter: "invert(1)", marginLeft: "10px" }}
+          style={this.style}
         />
-      </a>
+      </div>
     );
   }
 }

@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo.jsx";
 
 class Links extends Component {
   render() {
     return (
       <React.Fragment>
         <Link to="/" className="navbar-brand">
-          Home
+          <Logo
+            height={50}
+            style={{ filter: "invert(1)", marginLeft: "10px" }}
+          />
         </Link>
         <div className="collapse navbar-collapse">
           <div className="navbar-nav mr-auto">
