@@ -1,6 +1,7 @@
 const db = require('./DB/databaseindex.js')
 const Screens = require('./screens/screenModel.js')
 const Movies = require('./movies/movieModel.js')
+const PaymentInfo = require('./paymentInfo/paymentModel.js')
 
 const commands = () => {
 db.dropCollection( 'screens', function(err) {
@@ -19,6 +20,15 @@ db.dropCollection( 'movies', function(err) {
       else throw err;
     }
     else console.log( "-- movies collection dropped" );
+})
+
+db.dropCollection( 'payment', function(err) {
+    if ( err ) {
+      if (err.code === 26)  
+        console.log('-- payment collection does not exists');
+      else throw err;
+    }
+    else console.log( "-- payment collection dropped" );
 })
 
 const screenData = [{
@@ -106,8 +116,19 @@ const movieData = [{
 
 Movies.create(movieData,  function (err, screen) {
     if ( err ) throw err;
-    console.log( screen + '\n-- users inserted successfully')}); 
+    console.log( screen + '\n-- Movie inserted successfully')}); 
 
+const paymentData = [{
+    "id" : 1,
+    "cardHolderName" : "test name",
+    "cardNumber" : 12345678,
+    "expiry" : "09/25",
+    "cvc" : 111
+}]
+
+PaymentInfo.create(paymentData, function (err, screen) {
+    if ( err ) throw err;
+    console.log( screen + '\n-- Payment info inserted successfully')});
 
 }
 

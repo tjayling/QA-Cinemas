@@ -6,7 +6,9 @@ const cors = require('cors')
 const db = require('./DB/databaseindex.js')
 const screenRoutes = require('./routes/screenRoutes')
 const movieRoutes = require('./routes/movieRoutes')
-const commands = require('./commands.js');
+const paymentRoutes = require('./routes/paymentRoutes')
+
+const commands = require('./commands.js')
 
 
 const app = express()
@@ -17,7 +19,8 @@ app.use(cors())
 app.use(bodyParser.json())
 
 commands;
-app.use('/api', screenRoutes)
+app.use(screenRoutes)
 app.use(movieRoutes)
+app.use(paymentRoutes)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
