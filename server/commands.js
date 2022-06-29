@@ -24,7 +24,7 @@ db.dropCollection( 'movies', function(err) {
     else console.log( "-- movies collection dropped" );
 })
 
-db.dropCollection( 'payment', function(err) {
+db.dropCollection( 'payments', function(err) {
     if ( err ) {
       if (err.code === 26)  
         console.log('-- payment collection does not exists');
@@ -144,6 +144,16 @@ const movieData = [{
 	"actors" : "Tommy Wiseau, Juliette Danielle, Greg Sestero",
 	"directors" : "Tommy Wiseau",
 	"img_link" : "https://m.media-amazon.com/images/M/MV5BYjEzN2FlYmYtNDkwMC00NGFkLWE5ODctYmE5NmYxNzE2MmRiXkEyXkFqcGdeQXVyMjMwODc5Mw@@._V1_FMjpg_UX1000_.jpg"
+},
+{
+	_id: 5,
+	id:5,
+	title: "Pulp Fiction",
+	description: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+	length: "2h 45m",
+	actors: "John Travolta, Uma Thurman, Samuel L. Jackson",
+	directors: "Quentin Tarantino",
+	img_link: "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
 }];
 
 Movies.create(movieData,  function (err, screen) {
@@ -379,7 +389,61 @@ const viewingsData =[ {
 			$id: "1",
 		},
 		price: "£1.00" 
-	}];
+	},
+	{
+		_id: 17,
+		id: 17,
+		time: "19:20",
+		screen: {
+			$ref: "screens",
+			$id: "2",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "5",
+		},
+		price: "£1.00" 
+	},{
+		_id: 18,
+		id: 18,
+		time: "20:50",
+		screen: {
+			$ref: "screens",
+			$id: "3",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "5",
+		},
+		price: "£1.00" 
+	},{
+		_id: 19,
+		id: 19,
+		time: "11:45",
+		screen: {
+			$ref: "screens",
+			$id: "8",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "5",
+		},
+		price: "£1.00" 
+	},
+{
+	_id: 20,
+		id: 20,
+		time: "21:00",
+		screen: {
+			$ref: "screens",
+			$id: "1",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "5",
+		},
+		price: "£1.00" 	
+}];
 
 Viewings.create(viewingsData, function (err, screen) {
     if ( err ) throw err;
