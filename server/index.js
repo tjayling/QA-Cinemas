@@ -7,6 +7,7 @@ const db = require('./DB/databaseindex.js')
 const screenRoutes = require('./routes/screenRoutes')
 const movieRoutes = require('./routes/movieRoutes')
 const paymentRoutes = require('./routes/paymentRoutes')
+const viewingsRoutes = require('./routes/viewingsRoutes')
 
 const commands = require('./commands.js')
 
@@ -19,8 +20,10 @@ app.use(cors())
 app.use(bodyParser.json())
 
 commands;
+
 app.use(screenRoutes)
 app.use(movieRoutes)
 app.use(paymentRoutes)
+app.use(viewingsRoutes)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
