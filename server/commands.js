@@ -3,6 +3,7 @@ const Screens = require('./screens/screenModel.js')
 const Movies = require('./movies/movieModel.js')
 const PaymentInfo = require('./paymentInfo/paymentModel.js')
 const Viewings = require('./viewings/viewingsModel')
+const Bookings= require('./bookings/bookingsModel')
 
 const commands = () => {
 db.dropCollection( 'screens', function(err) {
@@ -39,6 +40,15 @@ db.dropCollection( 'viewings', function(err) {
       else throw err;
     }
     else console.log( "-- viewings collection dropped" );
+})
+
+db.dropCollection( 'bookings', function(err) {
+    if ( err ) {
+      if (err.code === 26)  
+        console.log('-- bookings collection does not exists');
+      else throw err;
+    }
+    else console.log( "-- bookings collection dropped" );
 })
 
 const screenData = [{
@@ -152,28 +162,41 @@ PaymentInfo.create(paymentData, function (err, screen) {
     if ( err ) throw err;
     console.log( screen + '\n-- Payment info inserted successfully')});
 
-}
+
 
 const viewingsData =[ {
 	"_id" : 1,
     "id" : 1,
     "time" : "12:50",
-    "screen_id" : {
+    "screen" : {
 		"$ref" : "screens",
 		"$id" : '1'
 	},
-    "movie_id" : {
+    "movie" : {
 		"$ref" : "movies",
 		"$id" : '1'
 	}
 
-}]
+}];
 
 Viewings.create(viewingsData, function (err, screen) {
     if ( err ) throw err;
     console.log( screen + '\n-- viewings info inserted successfully')});
 
+const bookingsData = [{
+	"id" :1,
+	"email" :"testemail@test.com",
+	"viewing" : {
+		"$ref" : "viewings",
+		"$id" : '1'
+	}
+}];
+
+Bookings.create(bookingsData, function (err, screen) {
+		if ( err ) throw err;
+		console.log( screen + '\n-- booking info inserted successfully')});
+
+}
+
 
 module.exports.commands = commands();
-
-
