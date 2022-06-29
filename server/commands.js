@@ -4,6 +4,9 @@ const Movies = require('./movies/movieModel.js')
 const PaymentInfo = require('./paymentInfo/paymentModel.js')
 const Viewings = require('./viewings/viewingsModel')
 const Bookings= require('./bookings/bookingsModel')
+const Discussions = require('./models/discussion-model.js')
+const Comments = require('./models/comment-model.js')
+
 
 const commands = () => {
 db.dropCollection( 'screens', function(err) {
@@ -49,6 +52,24 @@ db.dropCollection( 'bookings', function(err) {
       else throw err;
     }
     else console.log( "-- bookings collection dropped" );
+})
+
+db.dropCollection( 'comments', function(err) {
+	if ( err ) {
+	  if (err.code === 26)  
+		console.log('-- comments collection does not exists');
+	  else throw err;
+	}
+	else console.log( "-- comments collection dropped" );
+})
+
+db.dropCollection( 'discussions', function(err) {
+	if ( err ) {
+	  if (err.code === 26)  
+		console.log('-- discussions collection does not exists');
+	  else throw err;
+	}
+	else console.log( "-- discussions collection dropped" );
 })
 
 const screenData = [{
@@ -461,6 +482,105 @@ const bookingsData = [{
 Bookings.create(bookingsData, function (err, screen) {
 		if ( err ) throw err;
 		console.log( screen + '\n-- booking info inserted successfully')});
+
+
+const discussionData = [
+	{
+		_id: 1,
+		id: 1,
+		username: "Pyotr Yellow",
+		rating:  10,
+		comment: "So bad, it's good",
+		movie: {
+			"$ref" : "movies",
+			"$id" : '4'
+		}
+	},
+	{
+		_id: 2, 
+		id: 2,
+		username: "Emily Pink",
+		rating:  8,
+		comment: "The film's score is great",
+		movie: {
+			"$ref" : "movies",
+			"$id" : '1'
+		}
+	},
+	{
+		_id: 3,
+		id: 3,
+		username: "Shani Red",
+		rating:  8,
+		comment: "Matilda is a classic. Love it!!!",
+		movie: {
+			"$ref" : "movies",
+			"$id" : '2'
+		}
+	},
+	{
+		_id: 4, 
+		id: 4,
+		username: "Juan Purple",
+		rating:  3,
+		comment: "Not a fan - too many planes",
+		movie: {
+			"$ref" : "movies",
+			"$id" : '3'
+		}
+	}];
+	
+Discussions.create(discussionData,  function (err, screen) {
+	if ( err ) throw err;
+	console.log( screen + '\n-- Discussion inserted successfully')}); 
+	
+
+const commentData = [
+	{
+		_id: 1,
+		id: 1,
+		username: "Dora Blue",
+		comment: "Muy Bien",
+		discussion: {
+			"$ref" : "discussions",
+			"$id" : '3'
+		}
+	},
+	{
+		_id: 2,
+		id: 2,
+		username: "Emily Pink",
+		comment: "That's not true, it's a great film",
+		discussion: {
+			"$ref" : "discussions",
+			"$id" : '4'
+		}
+	},
+	{
+		_id: 3, 
+		id: 3,
+		username: "Ahmed Orange",
+		comment: "Well said",
+		discussion: {
+			"$ref" : "discussions",
+			"$id" : '3'
+		}
+	},
+	{
+		_id: 4,
+		id: 4,
+		username: "Pyotr Yellow",
+		comment: "I loved the score too!!",
+		discussion: {
+			"$ref" : "discussions",
+			"$id" : '2'
+		}
+	}];
+		
+Comments.create(commentData,  function (err, screen) {
+	if ( err ) throw err;
+	console.log( screen + '\n-- Comment inserted successfully')}); 
+	
 
 }
 
