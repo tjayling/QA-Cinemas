@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const axios = require("axios");
 
 axios
@@ -28,7 +29,7 @@ function useData(data) {
       for (let movie of movieData.data) {
         if (movieIds.includes(movie._id)) {
           movieElements.push(
-            <div style={{ margin: "25px" }}>
+            <div style={{ margin: "25px" }} key={movie._id}>
               <h2>{movie.title}</h2>
               <img
                 src={movie.img_link}
@@ -38,12 +39,19 @@ function useData(data) {
               {data.data.map((viewing) => {
                 if (viewing.movie.$id === movie._id) {
                   return (
-                    <a href="/">
+                    <div key={viewing._id}>
                       <div style={{ border: "2px solid black" }}>
-                        <p>{`Time: ${viewing.time}`}</p>
-                        <p>{`Screen: ${viewing.screen.$id}`}</p>
+                        {console.dir(viewing)}
+                        {/* <Link to={{ pathname: `/viewing`, state: { viewing } }}> */}
+                          <Link to={`/viewing`} name="Hello">
+                          <p>
+                            {`Time: ${viewing.time}`}
+                            <br />
+                            {`Screen: ${viewing.screen.$id}`}
+                          </p>
+                        </Link>
                       </div>
-                    </a>
+                    </div>
                   );
                 }
               })}
