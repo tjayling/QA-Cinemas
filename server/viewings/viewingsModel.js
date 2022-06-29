@@ -8,8 +8,7 @@ const Viewings = new Schema(
         time: { type: String, required: true },
         screen: { type: Object, required: true },
         movie: { type: Object, required: true},
-        
-        
+        price: { type: String, required: true}      
     }
 )
 module.exports = mongoose.model('viewings', Viewings);

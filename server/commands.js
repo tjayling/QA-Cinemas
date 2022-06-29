@@ -175,9 +175,211 @@ const viewingsData =[ {
     "movie" : {
 		"$ref" : "movies",
 		"$id" : '1'
-	}
+	},
+	price: "£1.00"
 
-}];
+	},
+	{
+		_id: 2,
+		id: 2,
+		time: "14:30",
+		screen: {
+			$ref: "screens",
+			$id: "4",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "1",
+		},
+		price: "£1.00"
+	},
+	{
+		_id: 3,
+		id: 3,
+		time: "10:00",
+		screen: {
+			$ref: "screens",
+			$id: "2",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "4",
+		},
+		price: "£1.00"
+	},
+	{
+		_id: 4,
+		id: 4,
+		time: "17:15",
+		screen: {
+			$ref: "screens",
+			$id: "5",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "2",
+		},
+		price: "£1.00"
+	},
+	{
+		_id: 5,
+		id: 5,
+		time: "00:00",
+		screen: {
+			$ref: "screens",
+			$id: "6",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "3",
+		}, 
+		price: "£1.00"
+	},
+	{
+		_id: 6,
+		id: 6,
+		time: "17:00",
+		screen: {
+			$ref: "screens",
+			$id: "1",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "2",
+		},
+		price: "£1.00" 
+	},{
+		_id: 7,
+		id: 7,
+		time: "15:00",
+		screen: {
+			$ref: "screens",
+			$id: "2",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "3",
+		},
+		price: "£1.00" 
+	},
+	{
+		_id: 8,
+		id: 8,
+		time: "11.15",
+		screen: {
+			$ref: "screens",
+			$id: "3",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "2",
+		},
+		price: "£1.00" 
+	},{
+		_id: 9,
+		id: 9,
+		time: "16:30",
+		screen: {
+			$ref: "screens",
+			$id: "3",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "3",
+		},
+		price: "£1.00"
+	},{
+		_id: 10,
+		id: 10,
+		time: "19:30",
+		screen: {
+			$ref: "screens",
+			$id: "4",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "4",
+		},
+		price: "£1.00"
+	},{
+		_id: 11,
+		id: 11,
+		time: "12:15",
+		screen: {
+			$ref: "screens",
+			$id: "5",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "4",
+		},
+		price: "£1.00" 
+	},{
+		_id: 12,
+		id: 12,
+		time: "18:40",
+		screen: {
+			$ref: "screens",
+			$id: "6",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "1",
+		},
+		price: "£1.00" 
+	},{
+		_id: 13,
+		id: 13,
+		time: "16:45",
+		screen: {
+			$ref: "screens",
+			$id: "7",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "3",
+		},
+		price: "£1.00" 
+	},{
+		_id: 14,
+		id: 14,
+		time: "13:20",
+		screen: {
+			$ref: "screens",
+			$id: "7",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "4",
+		},
+		price: "£1.00" 
+	},{
+		_id: 15,
+		id: 15,
+		time: "15:50",
+		screen: {
+			$ref: "screens",
+			$id: "8",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "2",
+		},
+		price: "£1.00"
+	},{
+		_id: 16,
+		id: 16,
+		time: "19:50",
+		screen: {
+			$ref: "screens",
+			$id: "8",
+		},
+		movie: {
+			$ref: "movies",
+			$id: "1",
+		},
+		price: "£1.00" 
+	}];
 
 Viewings.create(viewingsData, function (err, screen) {
     if ( err ) throw err;
