@@ -8,6 +8,7 @@ import About from "./pages/About.jsx";
 import Forum from "./pages/Forum.jsx";
 import Contact from "./pages/Contact.jsx";
 import Screens from "./pages/Screens.jsx";
+import Places from "./pages/Places.jsx";
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
         <Route exact path="/forum" element={<Forum />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/screens" element={<Screens />} />
+        <Route exact path="/places" element={<Places />} />
       </Routes>
     </div>
   );
