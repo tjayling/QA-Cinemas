@@ -24,7 +24,7 @@ const Viewing = () => {
         <br />
         £insert cost here
       </p>
-      <button>Book ticket</button>
+      <button>Book now</button>
     </div>
   );
 };
