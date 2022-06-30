@@ -44,6 +44,11 @@ class Links extends Component {
                 Our Screens
               </Link>
             </div>
+            <div className="collapse navbar-collapse">
+              <Link to="/places" className="nav-link">
+                Places nearby
+              </Link>
+              </div>
           </div>
         </div>
       </React.Fragment>

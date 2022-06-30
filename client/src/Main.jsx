@@ -8,7 +8,8 @@ import About from "./pages/About.jsx";
 import Forum from "./pages/Forum.jsx";
 import Contact from "./pages/Contact.jsx";
 import Screens from "./pages/Screens.jsx";
-import Viewing from "./pages/Viewing.jsx";
+import Places from "./pages/Places.jsx";
+import Way from "./pages/Way.jsx";
 import Class from "./pages/Class.jsx";
 
 const Main = () => {
@@ -22,7 +23,8 @@ const Main = () => {
         <Route exact path="/forum" element={<Forum />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/screens" element={<Screens />} />
-        <Route exact path="/viewing" element={<Viewing />} />
+        <Route exact path="/places" element={<Places />} />
+        <Route exact path="/way" element={<Way />} />
         <Route exact path="/class" element={<Class />} />
       </Routes>
     </div>
