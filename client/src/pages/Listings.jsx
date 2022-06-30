@@ -42,8 +42,10 @@ function useData(data) {
                     <div key={viewing._id}>
                       <div style={{ border: "2px solid black" }}>
                         {console.dir(viewing)}
-                        {/* <Link to={{ pathname: `/viewing`, state: { viewing } }}> */}
-                          <Link to={`/viewing`} name="Hello">
+                        <Link
+                          to={`/viewing`}
+                          state={{ viewing: JSON.stringify(viewing) }}
+                        >
                           <p>
                             {`Time: ${viewing.time}`}
                             <br />
