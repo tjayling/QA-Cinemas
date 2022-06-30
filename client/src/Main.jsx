@@ -9,6 +9,7 @@ import Forum from "./pages/Forum.jsx";
 import Contact from "./pages/Contact.jsx";
 import Screens from "./pages/Screens.jsx";
 import Viewing from "./pages/Viewing.jsx";
+import Class from "./pages/Class.jsx";
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/screens" element={<Screens />} />
         <Route exact path="/viewing" element={<Viewing />} />
+        <Route exact path="/class" element={<Class />} />
       </Routes>
     </div>
   );
