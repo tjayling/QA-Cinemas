@@ -7,11 +7,11 @@ const db = require('./DB/databaseindex.js')
 const screenRoutes = require('./routes/screenRoutes')
 const movieRoutes = require('./routes/movieRoutes')
 const paymentRoutes = require('./routes/paymentRoutes')
+
 const viewingsRoutes = require('./routes/viewingsRoutes')
 const bookingsRoutes = require('./routes/bookingRoutes')
 const commentRoutes = require('./routes/comment-route.js')
 const discussionRoutes = require('./routes/discussion-route.js')
-
 
 const commands = require('./commands.js')
 

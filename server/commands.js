@@ -7,7 +7,6 @@ const Bookings= require('./bookings/bookingsModel')
 const Discussions = require('./models/discussion-model.js')
 const Comments = require('./models/comment-model.js')
 
-
 const commands = () => {
 db.dropCollection( 'screens', function(err) {
     if ( err ) {
@@ -192,7 +191,6 @@ const paymentData = [{
 PaymentInfo.create(paymentData, function (err, screen) {
     if ( err ) throw err;
     console.log( screen + '\n-- Payment info inserted successfully')});
-
 
 
 const viewingsData =[ {
