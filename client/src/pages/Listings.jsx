@@ -44,7 +44,10 @@ function useData(data) {
                         {console.dir(viewing)}
                         <Link
                           to={`/viewing`}
-                          state={{ viewing: JSON.stringify(viewing) }}
+                          state={{
+                            viewing: JSON.stringify(viewing),
+                            movie: JSON.stringify(movie),
+                          }}
                         >
                           <p>
                             {`Time: ${viewing.time}`}
