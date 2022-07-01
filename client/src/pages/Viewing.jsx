@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 const Viewing = () => {
   let viewing = JSON.parse(useLocation().state.viewing);
   let movie = JSON.parse(useLocation().state.movie);
-  console.table(viewing);
   return (
     <div
       style={{

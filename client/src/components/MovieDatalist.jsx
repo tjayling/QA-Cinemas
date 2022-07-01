@@ -8,8 +8,7 @@ axios
 
 let options;
 function createDatalist({ data }) {
-  options = data.map((movie) => (<option value={movie.title} key={movie._id} />));
-  console.log(options)
+  options = data.map((movie) => (<option value={`${movie._id}. ${movie.title}`} key={movie._id} />));
 }
 
 const MovieDatalist = () => {
