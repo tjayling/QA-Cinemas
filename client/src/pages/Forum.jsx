@@ -1,16 +1,27 @@
 import React from "react";
-import MovieDatalist from "../components/MovieDatalist.jsx";
+import { useState } from "react";
+import Form from "../components/DiscussionsForm.jsx";
+import createElements from "../components/Format.jsx";
+const axios = require("axios");
 
 const Forum = () => {
+  const [movieElements, setMovieElements] = useState([]);
+
+  axios
+    .get("http://localhost:3000/discussion")
+    .then((response) => setMovieElements(createElements((response.data), "comments")))
+    .catch((error) => console.error(error));
+
+  // let movieElements = [];
+  // function getViewings(data) {
+  //   // movieElements = createElements(data, "comments");
+  //   setMovieElements(createElements(data, "comment"));
+  // }
+
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <form style={{ display: "flex", flexDirection: "column" }}>
-        <input type={"text"} placeholder={"Display name:"} />
-        <input list={"movie-options"} placeholder={"Select a movie: "} />
-        <MovieDatalist />
-        <textarea placeholder={"Comment:"} rows={"4"} cols={"50"} />
-        <input type={"submit"} value={"Submit"} />
-      </form>
+      <Form />
+      <div>{movieElements}</div>
     </div>
   );
 };
