@@ -11,13 +11,7 @@ const Forum = () => {
     .get("http://localhost:3000/discussion")
     .then((response) => setMovieElements(createElements((response.data), "comments")))
     .catch((error) => console.error(error));
-
-  // let movieElements = [];
-  // function getViewings(data) {
-  //   // movieElements = createElements(data, "comments");
-  //   setMovieElements(createElements(data, "comment"));
-  // }
-
+    
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Form />
