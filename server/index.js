@@ -12,6 +12,7 @@ const viewingsRoutes = require('./routes/viewingsRoutes')
 const bookingsRoutes = require('./routes/bookingRoutes')
 const commentRoutes = require('./routes/comment-route.js')
 const discussionRoutes = require('./routes/discussion-route.js')
+const releasesRoutes = require('./routes/releases-route.js')
 
 const commands = require('./commands.js')
 
@@ -32,5 +33,6 @@ app.use(viewingsRoutes)
 app.use(bookingsRoutes)
 app.use(commentRoutes)
 app.use(discussionRoutes)
+app.use(releasesRoutes)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

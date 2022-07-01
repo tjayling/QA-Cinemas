@@ -6,6 +6,7 @@ const Viewings = require('./viewings/viewingsModel')
 const Bookings= require('./bookings/bookingsModel')
 const Discussions = require('./models/discussion-model.js')
 const Comments = require('./models/comment-model.js')
+const NewReleases = require('./models/new-releases-model.js')
 
 const commands = () => {
 db.dropCollection( 'screens', function(err) {
@@ -69,6 +70,15 @@ db.dropCollection( 'discussions', function(err) {
 	  else throw err;
 	}
 	else console.log( "-- discussions collection dropped" );
+})
+
+db.dropCollection( 'releases', function(err) {
+	if ( err ) {
+	  if (err.code === 26)  
+		console.log('-- releases collection does not exists');
+	  else throw err;
+	}
+	else console.log( "-- releases collection dropped" );
 })
 
 const screenData = [{
@@ -578,7 +588,69 @@ const commentData = [
 Comments.create(commentData,  function (err, screen) {
 	if ( err ) throw err;
 	console.log( screen + '\n-- Comment inserted successfully')}); 
-	
+
+
+const newReleasesData = [
+	{
+        _id: 1,
+        id: 1,
+        title: "The Railway Children Return",
+        description: "Follow a group of children who are evacuated to a Yorkshire village during the Second World War, where they encounter a young soldier who, like them, is far away from home.",
+        release_date: "15th July 2022",
+        length: "1h 38m",
+        actors: "Jenny Agutter, Tom Courtenay, Sheridan Smith",
+        directors: "Morgan Matthews",
+        img_link: "https://regalcdn.azureedge.net/CW/TheRailwayChildrenReturn/HO00008249/TV_LargePosterImage/20220620-065734001.jpg",
+    },
+	{
+        _id: 2,
+        id:2,
+        title: "Nope",
+        description: "Caretakers at a California horse ranch encounter a mysterious force that affects human and animal behaviour.",
+        release_date: "22nd July 2022",
+        length: "2h 15m",
+        actors: "Daniel Kaluuya, Keke Palmer, Steven Yeun",
+        directors: "Jordan Peele",
+        img_link: "https://regalcdn.azureedge.net/CW/Nope/HO00008441/TV_LargePosterImage/20220107-051606381.jpg",
+    },
+	{
+        _id: 3,
+        id: 3,
+        title: "Bullet Train",
+        description: "Five assassins find themselves on a fast moving bullet train from Tokyo to Morioka with only a few stops in between. They discover their missions are not unrelated to each other. Based on the Japanese novel, Maria Beetle by Kotaro Isaka.",
+        release_date: "5th August 2022",
+        length: "2h 32m",
+        actors: "Joey King, Brad Pitt, Hiroyuki Sanada",
+        directors: "David Leitch",
+        img_link: "https://regalcdn.azureedge.net/CW/BulletTrain/HO00008250/TV_LargePosterImage/20220607-122915936.jpg",
+    },
+	{
+        _id: 4,
+        id: 4,
+        title: "Black Panther",
+        description: "American superhero film based on the Marvel Comics character Black Panther. Sequel to Marvel Studios 'Black Panther' (2018) and the 30th film in the Marvel Cinematic Universe.",
+        release_date: "11th November 2022",
+        length: "2h 10m",
+        actors: "Lupita Nyong'o, Letitia Wright, Daniel Kaluuya",
+        directors: "Ryan Coogler",
+        img_link: "https://regalcdn.azureedge.net/CW/BlackPantherWakandaForever/HO00008429/TV_LargePosterImage/20220112-060851386.jpg",
+    },
+	{
+        _id: 5,
+        id: 5,
+        title: "Spider-Man: Across the Spider-Verse",
+        description: "Miles Morales embarks on an epic adventure that will transport Brooklyn's full-time, friendly neighbourhood Spider-Man across the Multiverse to join forces with Gwen Stacy and a new team of Spider-People.",
+        release_date: "2nd June 2023",
+        length: "1h 55m",
+        actors: "Shameik Moore, Hailee Steinfeld, Oscar Isaac",
+        directors: "Joaquim Dos Santos, Kemp Powers, Justin Thompson",
+        img_link: "https://m.media-amazon.com/images/M/MV5BZGRhNDE1YjYtOGUzMC00YjliLThiOTgtYTkwNmQwNDZjYjFhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+    }];
+
+NewReleases.create(newReleasesData,  function (err, screen) {
+    if ( err ) throw err;
+    console.log( screen + '\n-- New Releases inserted successfully')}); 
+
 
 }
 
