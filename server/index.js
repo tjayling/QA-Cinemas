@@ -12,6 +12,7 @@ const viewingsRoutes = require('./routes/viewingsRoutes')
 const bookingsRoutes = require('./routes/bookingRoutes')
 const commentRoutes = require('./routes/comment-route.js')
 const discussionRoutes = require('./routes/discussion-route.js')
+const stripeRoutes = require('./stripe/stripebackend')
 
 const commands = require('./commands.js')
 
@@ -32,5 +33,6 @@ app.use(viewingsRoutes)
 app.use(bookingsRoutes)
 app.use(commentRoutes)
 app.use(discussionRoutes)
+app.use(stripeRoutes)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
