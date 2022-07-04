@@ -1,9 +1,9 @@
 import React from "react";
-import createElements from "../components/Format";
+import MovieFormat from "../components/MovieFormat.jsx";
+const axios = require("axios");
 
-const movies = () => {
-  let moviePosters = createElements({success:true, data: []}, "movies");
-  return <div>{moviePosters}</div>;
+const Movies = () => {
+  return <div>{MovieFormat()}</div>;
 };
 
-export default movies;
+export default Movies;
