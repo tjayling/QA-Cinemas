@@ -4,7 +4,8 @@ import Checkout from "../components/stripe";
 const Payment = () => {
     return(
         <div>
-            <Checkout />
+            <h1>Payment complete</h1>
+            {/* <Checkout /> */}
         </div>
     )
 }
