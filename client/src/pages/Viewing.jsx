@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 
@@ -7,6 +8,14 @@ const Viewing = () => {
   let viewing = JSON.parse(useLocation().state.viewing);
   let movie = JSON.parse(useLocation().state.movie);
   console.table(viewing);
+
+  const [totalPrice, setTotalPrice] =useState(0);
+
+  function price(e) {
+    e.preventDefault(); 
+    setTotalPrice(e.target.value);
+   }
+ 
   
   return (
     <div
@@ -42,9 +51,16 @@ const Viewing = () => {
           <div>
             <label for="quantity">Ticket Quantity: </label>
             {/* <select id="tickets"> <option value="Select">  </option> <option value="Adult"> Adult </option> <option value="Children"> Children</option> <option value="Student"> Student</option> <option value="Senior"> Senior</option></select> */}
-            <select id="quantity"> <option value="0"> 0 </option> <option value="1"> 1 </option> <option value="2"> 2</option> <option value="3"> 3</option> <option value="4"> 4</option> <option value="5"> 5 </option></select>
+            <select id="quantity" class="form-select" onChange={(e)=>price(e)}> 
+              <option selected> 0 </option> 
+              <option value="1"> 1 </option> 
+              <option value="2"> 2 </option> 
+              <option value="3"> 3 </option> 
+              <option value="4"> 4 </option> 
+              <option value="5"> 5 </option>
+              </select>
             <br/>
-            <p>Total Price: £{document.getElementById("quantity").value}.00</p>
+            <p id="viewing-price">Total Price: £{totalPrice}.00</p>
             {/* <select id="pricing"> <option value="0"> 0 </option> <option value="1"> 1-£1 </option> <option value="2"> 2-£2</option> <option value="3"> 3-£3 </option> <option value="4"> 4-£4 </option> <option value="5"> 5-£5 </option></select> */}
             <button type="button" id="proceed-to-Checkout">Proceed to checkout</button>
           </div>
@@ -53,6 +69,8 @@ const Viewing = () => {
     </div>
 
   );
+
+
 };
 
 export default Viewing;
