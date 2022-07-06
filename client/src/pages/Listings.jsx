@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer"
+
 const axios = require("axios");
 
 axios
@@ -57,6 +59,7 @@ function useData(data) {
                         </Link>
                       </div>
                     </div>
+                    
                   );
                 }
               })}
@@ -69,7 +72,12 @@ function useData(data) {
 }
 
 const listings = () => {
-  return <div style={{ display: "flex" }}>{movieElements}</div>;
+  return <div style={{ display: "flex" }}>{movieElements}
+  </div>;
+  <div>
+    <Footer/>
+  </div>
+ 
 };
 
 export default listings;

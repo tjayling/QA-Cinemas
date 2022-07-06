@@ -1,4 +1,7 @@
 import React from "react";
+import Footer from "../components/Footer"
+
+
 
 
 const Contact = () => {
@@ -34,6 +37,9 @@ const Contact = () => {
 
     <h2>Contact via phone</h2>
     <p>+44 123 456 789</p>
+
+    <Footer/>
+   
 
 
   </div>

@@ -1,5 +1,7 @@
 import React from "react";
  import { useLocation, Link } from "react-router-dom";
+ import Footer from "../components/Footer"
+
 
 
 
@@ -45,7 +47,7 @@ const Viewing = () => {
  
     </div>
   </div>
-
+<Footer/>
       </div>
       
     </div>
