@@ -101,18 +101,27 @@ getDiscussionById = async (req, res) => {
   }).catch((err) => console.log(err));
 };
 
-getDiscussions = async (req, res) => {
-  await Discussion.find({}, (err, discussion) => {
-    if (err) {
-      return res.status(400).json({ success: false, error: err });
-    }
-    if (!discussion.length) {
-      return res
-        .status(404)
-        .json({ success: false, error: `Discussions not found` });
-    }
-    return res.status(200).json({ success: true, data: discussion });
-  }).catch((err) => console.log(err));
+getDiscussions = (req, res) => {
+  Discussion.find({})
+    .then((discussion, err) => {
+      if (err) return res.status(400).json({ success: false, error: err });
+        if (!discussion.length)
+        return res
+          .status(404)
+          .json({ success: false, error: `Discussions not found` });
+      return res.status(200).json({ success: true, data: discussion });
+    })
+    .catch((err) => console.log(err));
+  // await Discussion.find({}, (err, discussion) => {
+  //   if (err) {
+  //     return res.status(400).json({ success: false, error: err });
+  //   }
+  //   if (!discussion.length) {
+  //     return res
+  //       .status(404)
+  //       .json({ success: false, error: `Discussions not found` });
+  //   }
+  //   return res.status(200).json({ success: true, data: discussion });
 };
 
 module.exports = {

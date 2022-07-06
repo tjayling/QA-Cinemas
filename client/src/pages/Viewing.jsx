@@ -53,7 +53,7 @@ const Viewing = () => {
       <h1>{movie.title}</h1>
       <img
         src={movie.img_link}
-        alt={`${movie.title} cover image`}
+        alt={`${movie.title} cover`}
         width="200px"
       />
       <p>

@@ -1,12 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import Form from "../components/DiscussionsForm.jsx";
 import CommentsFormat from "../components/CommentsFormat.jsx";
 
 const Forum = () => {
+  const [fetchData, setFetchData] = useState(true);
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Form />
-      <div>{CommentsFormat()}</div>
+      <Form getData={setFetchData} fetchData={fetchData} />
+      <div>{CommentsFormat(setFetchData, fetchData)}</div>
     </div>
   );
 };
