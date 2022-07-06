@@ -10,13 +10,13 @@ createPaymentInfo = (req, res) => {
         })
     }
 
-    const PaymentInfo = new PaymentInfo(body)
+    const paymentInfo = new PaymentInfo(body)
 
-    if (!PaymentInfo) {
+    if (!paymentInfo) {
         return res.status(400).json({ success: false, error: err })
     }
 
-    PaymentInfo
+    paymentInfo
         .save()
         .then(() => {
             return res.status(201).json({
