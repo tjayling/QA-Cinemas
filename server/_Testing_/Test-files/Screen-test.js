@@ -49,7 +49,7 @@ mocha.describe("CRUD testing", () => {
 
     mocha.it("Should fail to create a screen", (done) => {
       const requestBody = {
-        _id: 7,   //add anothe example - may need to add a create function and route if doesn't exist
+        _id: 7,   //add another example - may need to add a create function and route if doesn't exist
         id: 7,
         capacity: 'not a number',
         screensize: 3,
@@ -83,7 +83,7 @@ mocha.describe("CRUD testing", () => {
     mocha.it("should find screen by id", (done) => {
         chai
           .request(server)
-          .get("/Screens/1")
+          .get(`/Screens/${id}`)
           .end((err, res) => {
             chai.expect(err).to.be.null;
             chai.expect(res.status).to.equal(200);
