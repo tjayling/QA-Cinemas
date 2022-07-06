@@ -15,7 +15,9 @@ const MovieFormat = () => {
     return (
       <div style={{ margin: "25px" }} key={movie._id}>
         <h2>{movie.title}</h2>
+        <h5>Featuring {movie.actors}</h5>
         <img src={movie.img_link} alt={`${movie.title} cover`} width="200px" />
+        <span>{movie.description}</span>
       </div>
     );
   });
