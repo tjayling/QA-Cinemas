@@ -12,10 +12,13 @@ myapp.use(bodyParser.json()); // converts the request body from JSON (res => res
 const screenRouter = require("../routes/screenRoutes");
 const movieRouter = require("../routes/movieRoutes");
 const discussionRouter = require("../routes/discussion-route");
+const commentRouter = require("../routes/comment-route");
 
 myapp.use(screenRouter);
 myapp.use(movieRouter);
 myapp.use(discussionRouter);
+myapp.use(commentRouter);
+
 
 // myapp.use("*", (req, res, next) => next({ status: 404, message: "Invalid url" })); // catches 404's
 
