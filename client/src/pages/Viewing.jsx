@@ -7,10 +7,10 @@ import StripeCheckout from "react-stripe-checkout";
  import "react-toastify/dist/ReactToastify.css";
 
 
-
 const Viewing = () => {
   let viewing = JSON.parse(useLocation().state.viewing);
   let movie = JSON.parse(useLocation().state.movie);
+
   console.table(viewing);
 
   const [totalPrice, setTotalPrice] =useState(1);
@@ -41,7 +41,7 @@ const Viewing = () => {
     e.preventDefault(); 
     setTotalPrice(e.target.value);
    }
-  
+   
   return (
     <div
       style={{
