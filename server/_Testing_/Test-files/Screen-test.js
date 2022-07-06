@@ -93,7 +93,7 @@ mocha.describe("CRUD testing", () => {
           });
       });
 
-      mocha.it("should fail find screen by id", (done) => {
+      mocha.it("should fail to find screen by id", (done) => {
         chai
           .request(server)
           .get("/Screens/1111")
