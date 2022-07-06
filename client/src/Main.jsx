@@ -11,6 +11,8 @@ import Screens from "./pages/Screens.jsx";
 import Places from "./pages/Places.jsx";
 import Way from "./pages/Way.jsx";
 import Class from "./pages/Class.jsx";
+import Payment from "./pages/Payment";
+import Viewing from "./pages/Viewing.jsx";
 
 const Main = () => {
   return (
@@ -26,6 +28,8 @@ const Main = () => {
         <Route exact path="/places" element={<Places />} />
         <Route exact path="/way" element={<Way />} />
         <Route exact path="/class" element={<Class />} />
+        <Route exact path="/payment" element={<Payment />} />
+        <Route exact path="/viewing" element={<Viewing />} />
       </Routes>
     </div>
   );
