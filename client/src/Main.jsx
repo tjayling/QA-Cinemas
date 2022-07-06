@@ -14,7 +14,7 @@ import Way from "./pages/Way.jsx";
 import Class from "./pages/Class.jsx";
 import Open from "./pages/Open.jsx";
 import Payment from "./pages/Payment";
-import Viewing from "./pages/Viewing.jsx";
+
 
 const Main = () => {
   return (

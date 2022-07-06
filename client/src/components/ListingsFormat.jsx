@@ -28,7 +28,7 @@ const ListingsFormat = () => {
           if (item.movie.$id === movie._id) {
             return (
               <div key={item._id}>
-                <div style={{ border: "2px solid black" }}>
+                <div style={{ border: "2px solid black",marginTop: "10px",   marginBottom: "10px" }}>
                   <Link
                     to={`/viewing`}
                     state={{
