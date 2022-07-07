@@ -87,45 +87,25 @@ const Viewing = () => {
       </p>
       <div>
         <div class="btn-group">
-          <button
-            type="button"
-            class="btn btn-black dropdown-toggle"
-            data-bs-toggle="dropdown"
-          >
-            Tickets
-          </button>
-          <div class="dropdown-menu">
-            <div class="dropdown-header">Cinema Tickets</div>
-            <a class="dropdown-item">Adult</a>
-            <a class="dropdown-item">Children</a>
-            <a class="dropdown-item">Student</a>
-            <a class="dropdown-item">Senior</a>
-          </div>
           <div>
             <select id="tickets">
-              {" "}
-              <option value="Select"> </option>{" "}
-              <option value="Adult"> Adult </option>{" "}
-              <option value="Children"> Children</option>{" "}
-              <option value="Student"> Student</option>{" "}
-              <option value="Senior"> Senior</option>
+              <option value="Adult">Adult </option>
+              <option value="Children">Child</option>
+              <option value="Student">Student</option>
+              <option value="Senior">Senior</option>
             </select>
             <select id="quantity">
-              {" "}
-              <option value="0"> 0 </option> <option value="1"> 1 </option>{" "}
-              <option value="2"> 2</option> <option value="3"> 3</option>{" "}
+              <option value="0"> 0 </option> <option value="1"> 1 </option>
+              <option value="2"> 2</option> <option value="3"> 3</option>
               <option value="4"> 4</option> <option value="5"> 5 </option>
             </select>
             <select id="pricing">
-              {" "}
-              <option value="0"> 0 </option> <option value="1"> 1-£1 </option>{" "}
-              <option value="2"> 2-£2</option> <option value="3"> 3-£3 </option>{" "}
-              <option value="4"> 4-£4 </option>{" "}
+              <option value="0"> 0 </option> <option value="1"> 1-£1 </option>
+              <option value="2"> 2-£2</option> <option value="3"> 3-£3 </option>
               <option value="5"> 5-£5 </option>
             </select>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
