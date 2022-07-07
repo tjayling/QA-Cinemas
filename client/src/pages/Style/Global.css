@@ -1,15 +1,14 @@
 body {
-  background-color: #aeaeae !important;
-}
-h3 {
-  text-align: left;
+  background-color: #ddd !important;
 }
 
-form {
-  padding-top: 50px;
-  padding-right: 300px;
-  padding-bottom: 50px;
-  padding-left: 300px;
+.page-title {
+  background-color: #ccc;
+  border: 2px groove #eee;
+  font-size: 50px;
+  margin: 20px;
+  padding: 10px 20px 15px 20px;
+  border-radius: 10px;
 }
 
 .classificaiton-img {
