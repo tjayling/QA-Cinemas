@@ -13,9 +13,14 @@ const MovieFormat = () => {
   }, []);
   return movieData.map((movie) => {
     return (
-      <div style={{ margin: "25px" }} key={movie._id}>
-        <h2>{movie.title}</h2>
+      <div className="movie-container" key={movie._id}>
         <img src={movie.img_link} alt={`${movie.title} cover`} width="200px" />
+
+        <div className="movie-data-container">
+          <h3>{movie.title}</h3>
+          <h4>Featuring {movie.actors}</h4>
+          <p>{movie.description}</p>
+        </div>
       </div>
     );
   });
