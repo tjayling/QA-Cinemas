@@ -1,4 +1,5 @@
 import React from "react";
+import "../pages/Style/Discussions.css";
 
 const Comment = ({ comment }) => {
   let stars = [];
@@ -7,9 +8,9 @@ const Comment = ({ comment }) => {
   }
   return (
     <div>
-      <h3>{comment.username}</h3>
-      <p style={{ fontSize: "25px", color: "gold" }}>{stars}</p>
-      <p>{comment.comment}</p>
+      <span className="comment-username">{comment.username}</span>
+      <span className="stars" >{stars}</span>
+      <p className="comment-text">{comment.comment}</p>
     </div>
   );
 };

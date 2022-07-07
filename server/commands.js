@@ -4,7 +4,6 @@ const Movies = require("./movies/movieModel.js");
 const Viewings = require("./viewings/viewingsModel");
 const Bookings = require("./bookings/bookingsModel");
 const Discussions = require("./models/discussion-model.js");
-const Comments = require("./models/comment-model.js");
 
 const commands = () => {
   db.dropCollection("screens", function (err) {
@@ -544,54 +543,6 @@ const commands = () => {
   Discussions.create(discussionData, function (err, screen) {
     if (err) throw err;
     console.log(screen + "\n-- Discussion inserted successfully");
-  });
-
-  const commentData = [
-    {
-      _id: 1,
-      id: 1,
-      username: "Dora Blue",
-      comment: "Muy Bien",
-      discussion: {
-        $ref: "discussions",
-        $id: "3",
-      },
-    },
-    {
-      _id: 2,
-      id: 2,
-      username: "Emily Pink",
-      comment: "That's not true, it's a great film",
-      discussion: {
-        $ref: "discussions",
-        $id: "4",
-      },
-    },
-    {
-      _id: 3,
-      id: 3,
-      username: "Ahmed Orange",
-      comment: "Well said",
-      discussion: {
-        $ref: "discussions",
-        $id: "3",
-      },
-    },
-    {
-      _id: 4,
-      id: 4,
-      username: "Pyotr Yellow",
-      comment: "I loved the score too!!",
-      discussion: {
-        $ref: "discussions",
-        $id: "2",
-      },
-    },
-  ];
-
-  Comments.create(commentData, function (err, screen) {
-    if (err) throw err;
-    console.log(screen + "\n-- Comment inserted successfully");
   });
 };
 

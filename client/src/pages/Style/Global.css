@@ -1,15 +1,40 @@
-body {
-  background-color: #aeaeae !important;
+<<<<<<< HEAD
+body {background-color: #aeaeae !important}
+  
+  
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Montserrat', sans-serif;
+
+  
 }
-h3 {
-  text-align: left;
+  
+h1, h2, h3, h4 {
+    padding-top: 50px;
+    text-align: center;
+  
 }
 
-form {
-  padding-top: 50px;
-  padding-right: 300px;
-  padding-bottom: 50px;
-  padding-left: 300px;
+h5 {
+text-align:start;
+font-size: 200% !important;
+margin-bottom: 15%;
+}
+
+p {
+    text-align: center;
+=======
+body {
+  background-color: #ddd !important;
+}
+
+.page-title {
+  background-color: #ccc;
+  border: 2px groove #eee;
+  font-size: 50px;
+  margin: 20px;
+  padding: 10px 20px 15px 20px;
+  border-radius: 10px;
+>>>>>>> 9b2dc9e99213e2bebd4cb0d5f894b94fd774c811
 }
 
 .classificaiton-img {
@@ -24,6 +49,29 @@ form {
 }
 
 .center {
+<<<<<<< HEAD
+    display: block;
+    width: 50%;
+}
+  
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    justify-content: space-evenly;
+};
+
+.item1{
+    width: 25%;
+    text-align: right;
+    padding: 5%;
+
+}
+
+.movie-text{
+    width: 75%;
+=======
   display: block;
   width: 50%;
 }
@@ -37,4 +85,5 @@ form {
 .movie-data-container {
   display: flex;
   flex-direction: column;
+>>>>>>> 9b2dc9e99213e2bebd4cb0d5f894b94fd774c811
 }
