@@ -1,10 +1,12 @@
 import React from "react";
+ import { useLocation } from "react-router-dom";
+
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
- import axios from "axios";
- import { toast } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const Viewing = () => {
