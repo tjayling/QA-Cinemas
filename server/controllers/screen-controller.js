@@ -1,5 +1,38 @@
 const Screens =require('../screens/screenModel');
 
+createScreens = (req, res) => {
+    const body = req.body
+
+    if (!body) {
+        return res.status(400).json({
+            success: false,
+            error: 'You must provide a Screen',
+        })
+    }
+
+    const screens = new Screens(body)
+
+    if (!screens) {
+        return res.status(400).json({ success: false, error: err })
+    }
+
+    screens
+        .save()
+        .then(() => {
+            return res.status(201).json({
+                success: true,
+                id: screens._id,
+                message: 'Screen created!',
+            })
+        })
+        .catch(error => {
+            return res.status(400).json({
+                error,
+                message: 'Screen not created!',
+            })
+        })
+}
+
 
 getScreensById = async (req, res) => {
     await Screens.findOne({ _id: req.params.id }, (err, Screens) => {
@@ -32,5 +65,6 @@ getScreens = async (req, res) => {
 
 module.exports = {
     getScreens,
-    getScreensById
+    getScreensById,
+    createScreens
 }

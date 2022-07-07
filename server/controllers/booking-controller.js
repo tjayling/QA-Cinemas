@@ -10,13 +10,13 @@ createBookings = (req, res) => {
         })
     }
 
-    const Bookings = new Bookings(body)
+    const bookings = new Bookings(body)
 
-    if (!Bookings) {
+    if (!bookings) {
         return res.status(400).json({ success: false, error: err })
     }
 
-    Bookings
+    bookings
         .save()
         .then(() => {
             return res.status(201).json({
