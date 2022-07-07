@@ -1,9 +1,15 @@
 import React from "react";
 import ListingsFormat from "../components/ListingsFormat.jsx";
-const axios = require("axios");
 
 const Listings = () => {
-  return <div style={{ display: "flex" }}>{ListingsFormat()}</div>;
+  return (
+    <div>
+      <h1>Listings</h1>
+      <div className="center" style={{ display: "flex" }}>
+        {ListingsFormat()}
+      </div>
+    </div>
+  );
 };
 
 export default Listings;

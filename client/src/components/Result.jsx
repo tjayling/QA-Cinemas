@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ResultStyle.css";
+import "../pages/Style/ResultStyle.css";
 
 const Result = ({ movie }) => {
   return (
