@@ -34,7 +34,7 @@ createBookings = (req, res) => {
 }
 
 getBookingsById = async (req, res) => {
-    await Bookings.findOne({ _id: req.params.id }, (err, Bookings) => {
+    await Bookings.findOne({ id: req.params.id }, (err, Bookings) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
