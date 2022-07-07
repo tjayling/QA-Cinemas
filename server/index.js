@@ -6,7 +6,6 @@ const cors = require('cors')
 const db = require('./DB/databaseindex.js')
 const screenRoutes = require('./routes/screenRoutes')
 const movieRoutes = require('./routes/movieRoutes')
-const paymentRoutes = require('./routes/paymentRoutes')
 
 const viewingsRoutes = require('./routes/viewingsRoutes')
 const bookingsRoutes = require('./routes/bookingRoutes')
@@ -28,7 +27,6 @@ commands;
 
 app.use(screenRoutes)
 app.use(movieRoutes)
-app.use(paymentRoutes)
 app.use(viewingsRoutes)
 app.use(bookingsRoutes)
 app.use(commentRoutes)

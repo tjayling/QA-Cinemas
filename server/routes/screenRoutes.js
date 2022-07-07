@@ -6,5 +6,6 @@ const router = express.Router()
 
 router.get('/Screens/:id', ScreensCtrl.getScreensById)
 router.get('/Screens', ScreensCtrl.getScreens)
+router.post('/Screens/create', ScreensCtrl.createScreens)
 
 module.exports = router

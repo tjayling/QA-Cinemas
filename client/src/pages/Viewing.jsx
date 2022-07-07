@@ -12,7 +12,10 @@ const Viewing = () => {
 
   console.table(viewing);
 
-  const [totalPrice, setTotalPrice] = useState(1);
+
+  const [totalPrice, setTotalPrice] =useState(1);
+  const [emails, setEmails] = useState("")
+
 
   const [product] = useState({
     title: movie.title,
@@ -39,8 +42,37 @@ const Viewing = () => {
   function price(e) {
     e.preventDefault();
     setTotalPrice(e.target.value);
-  }
+   }
 
+   function bookingEmail(e) {
+    e.preventDefault(); 
+    setEmails(e.target.value);
+   }
+
+  let bookingId = 2;
+  let viewingId = viewing.id;
+
+   function submitBooking(e) {
+    e.preventDefault();
+    axios
+      .post("http://localhost:3000/Bookings/create", {
+        id: `${bookingId}`,
+        email: `${emails}`,
+        viewing: {
+          $ref: "viewings",
+          $id: `${viewingId}`
+        }
+      })
+      .then((res) => {
+         console.log(res) 
+         if (res.status === 201) {
+          window.location.replace("http://localhost:3001/payment");
+          bookingId++
+        }
+      })
+      .catch((error) => console.error(error));   
+  };
+   
   return (
     <div
       style={{
@@ -79,6 +111,7 @@ const Viewing = () => {
           <div>
             <label for="quantity">Ticket Quantity: </label>
             {/* <select id="tickets"> <option value="Select">  </option> <option value="Adult"> Adult </option> <option value="Children"> Children</option> <option value="Student"> Student</option> <option value="Senior"> Senior</option></select> */}
+
             <select
               id="quantity"
               class="form-select"
@@ -88,10 +121,15 @@ const Viewing = () => {
               <option value="2"> 2 </option>
               <option value="3"> 3 </option>
               <option value="4"> 4 </option>
+
               <option value="5"> 5 </option>
             </select>
             <br />
             <p id="viewing-price">Total Price: £{totalPrice}.00</p>
+            <label for="booking-email" class='form-label'>Please enter the email you wish to book with:</label>
+            <br/>
+            <input type='email' id= 'booking-email' name={"email"} placeholder="Enter email..." onChange={(e)=>bookingEmail(e)}/>
+            <br/>
             {/* <select id="pricing"> <option value="0"> 0 </option> <option value="1"> 1-£1 </option> <option value="2"> 2-£2</option> <option value="3"> 3-£3 </option> <option value="4"> 4-£4 </option> <option value="5"> 5-£5 </option></select> */}
             <div className="form-group container"></div>
             <StripeCheckout
@@ -103,7 +141,12 @@ const Viewing = () => {
               billingAddress
               shippingAddress
             />
-            <div />
+
+            <br/>
+            <button type="button" id="confirm-butt" onClick={(e)=>submitBooking(e)}>Confirm Ticket Booking</button>
+
+            <div/>
+
           </div>
         </div>
       </div>
