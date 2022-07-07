@@ -18,7 +18,6 @@ const About = () => {
                     <br/>
                     
    
-   
 
                     <div className="column" >
                     <img src={AboutImg} alt="Cinema-Picture" width='555' />   <img src={AboutImage} alt="Seating-Picture" width='600'  /><br/>
