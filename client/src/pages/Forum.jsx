@@ -1,22 +1,16 @@
 import React from "react";
 import Footer from "../components/Footer"
-
 import MovieDatalist from "../components/MovieDatalist.jsx";
+import { useState } from "react";
+import Form from "../components/DiscussionsForm.jsx";
+import CommentsFormat from "../components/CommentsFormat.jsx";
 
 const Forum = () => {
+  const [fetchData, setFetchData] = useState(true);
   return (
-    <div style={{ display: "flex", justifyContent: "center", position: "-webkit-sticky", left: 0, bottom: 0, right: 0  }}>
-      <form style={{ display: "flex", flexDirection: "column" }}>
-        <input type={"text"} placeholder={"Display name:"} />
-        <input list={"movie-options"} placeholder={"Select a movie: "} />
-        <MovieDatalist />
-        <textarea placeholder={"Comment:"} rows={"4"} cols={"50"} />
-        <input type={"submit"} value={"Submit"} />
-        <Footer/>
-      </form>
-
-     
-   
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <Form getData={setFetchData} fetchData={fetchData} />
+      <div>{CommentsFormat(setFetchData, fetchData)}</div>
     </div>
   );
 };

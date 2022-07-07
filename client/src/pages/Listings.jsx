@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer"
 
@@ -77,7 +78,6 @@ const listings = () => {
   <div>
     <Footer/>
   </div>
- 
 };
 
-export default listings;
+export default Listings;

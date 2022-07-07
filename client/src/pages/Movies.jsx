@@ -6,6 +6,12 @@ const movies = () => {
     
   <Footer/>
   </div>;
+import MovieFormat from "../components/MovieFormat.jsx";
+const axios = require("axios");
+
+const Movies = () => {
+  return <div>{MovieFormat()}</div>;
+  <Footer/>
 };
 
-export default movies;
+export default Movies;
