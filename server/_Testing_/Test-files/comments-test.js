@@ -150,23 +150,23 @@ mocha.describe("CRUD testing", () => {
             });
         });
 
-        mocha.skip("should not update comment", (done) => {
-            const requestBody = {
-                _id: 10,
-                id: "not a number",
-                username: "Emily Pink",
-                comment: "That's not true, it's a great film" ,
-            };
-          chai
-          .request(server)
-          .put(`/comments/update/${id}`)
-          .send(requestBody)
-          .end((err, res) => {
-              chai.expect(err)
-              chai.expect(res.status).to.equal(404);
-              chai.expect(res.body).to.have.property('message').eql("Comment not updated!");
-              return done();
-          });
-});
+//         mocha.it("should not update comment", (done) => {
+//             const requestBody = {
+//                 _id: 10,
+//                 id: "not a number",
+//                 username: "Emily Pink",
+//                 comment: "That's not true, it's a great film" ,
+//             };
+//           chai
+//           .request(server)
+//           .put(`/comments/update/${id}`)
+//           .send(requestBody)
+//           .end((err, res) => {
+//               chai.expect(err)
+//               chai.expect(res.status).to.equal(404);
+//               chai.expect(res.body).to.have.property('message').eql("Comment not updated!");
+//               return done();
+//           });
+// });
 
 })

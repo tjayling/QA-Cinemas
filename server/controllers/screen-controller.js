@@ -21,7 +21,7 @@ createScreens = (req, res) => {
         .then(() => {
             return res.status(201).json({
                 success: true,
-                id: Screens._id,
+                id: screens._id,
                 message: 'Screen created!',
             })
         })
