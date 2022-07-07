@@ -39,7 +39,7 @@ const CommentsFormat = (getData, fetchData) => {
             if (item.movie.$id === movie._id) {
               return (
                 <div key={item._id}>
-                  <div style={{ border: "2px solid black" }}>
+                  <div style={{ border: "2px solid black", height:"225px", width:"900px"}}>
                     <Comment comment={item} id={item._id} />
                   </div>
                 </div>

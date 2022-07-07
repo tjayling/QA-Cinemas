@@ -7,7 +7,6 @@ const Forum = () => {
   const [fetchData, setFetchData] = useState(true);
   return (
     <div>
-      <body>
       <h1>Welcome to the review page</h1>
 
     <div class="row justify-content-center">
@@ -21,7 +20,6 @@ const Forum = () => {
       <div>{CommentsFormat(setFetchData, fetchData)}</div>
     </div>
 </div>
-</body>
 </div>
   );
 };
