@@ -12,10 +12,7 @@ const Home = () => {
           justifyContent: "center",
         }}
       >
-        <Logo
-          height={150}
-          style={{marginTop: "75px" }}
-        />
+        <Logo height={150} style={{ marginTop: "75px" }} />
       </div>
     </div>
   );

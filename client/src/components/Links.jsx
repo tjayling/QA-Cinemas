@@ -12,9 +12,9 @@ class Links extends Component {
             style={{ filter: "invert(1)", marginLeft: "10px" }}
           />
         </Link>
-        <div className="collapse navbar-collapse">
+        <div className="collpase navbar-collapse">
           <div className="navbar-nav mr-auto">
-            <div className="collapse navbar-collapse">
+            <div className="collpase navbar-collapse">
               <Link to="/movies" className="nav-link">
                 Movies
               </Link>
@@ -44,6 +44,11 @@ class Links extends Component {
                 Our Screens
               </Link>
             </div>
+            <div className="collapse navbar-collapse">
+              <Link to="/places" className="nav-link">
+                Places nearby
+              </Link>
+              </div>
           </div>
         </div>
       </React.Fragment>
