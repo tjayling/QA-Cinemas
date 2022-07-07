@@ -77,6 +77,7 @@ const DiscussionsForm = ({getData, fetchData}) => {
       <Error
         text="Please select a valid movie from the list"
         display={datalistError}
+        
       />
       <input name={"rating"} type={"text"} placeholder={"Rating out of 10: "} />
       <Error text="Please enter a number" display={ratingError} />
