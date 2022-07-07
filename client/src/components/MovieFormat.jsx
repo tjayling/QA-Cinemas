@@ -12,17 +12,15 @@ const MovieFormat = () => {
       .catch((error) => console.error(error));
   }, []);
   return movieData.map((movie) => {
-
-
     return (
-      <div class="grid-container" key={movie._id}>
+      <div className="movie-container" key={movie._id}>
+        <img src={movie.img_link} alt={`${movie.title} cover`} width="200px" />
 
-        <img class="item2" src={movie.img_link} alt={`${movie.title} cover`} width="200px" />
-
-  
-        <h5 class="item3">{movie.title}</h5>
-        <h5 class="item5">Featuring {movie.actors}</h5>
-        <h5 class="item6">{movie.description}</h5>
+        <div className="movie-data-container">
+          <h3>{movie.title}</h3>
+          <h4>Featuring {movie.actors}</h4>
+          <p>{movie.description}</p>
+        </div>
       </div>
     );
   });

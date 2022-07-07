@@ -1,60 +1,40 @@
-body {background-color: #aeaeae !important}
-  
-  
-h1, h2, h3, h4, p {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-  
+body {
+  background-color: #aeaeae !important;
 }
-  
-h1, h2, h3, h4 {
-    padding-top: 50px;
-  
+h3 {
+  text-align: left;
 }
 
-h5 {
-text-align:start;
-}
-  
 form {
-    padding-top: 50px;
-    padding-right: 300px;
-    padding-bottom: 50px;
-    padding-left: 300px;
-  
+  padding-top: 50px;
+  padding-right: 300px;
+  padding-bottom: 50px;
+  padding-left: 300px;
 }
-  
+
+.classificaiton-img {
+  width: 100px;
+  height: 100px;
+}
+
+.classificaiton-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .center {
-    display: block;
-    width: 50%;
-}
-  
-
-/* .movieimg{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-}
-   */
-
-.item1 { 
-    grid-area: header; 
-    width: 10px;
-}
-.item2 { grid-area: pic;}
-.item3 { grid-area: main; }
-.item5 { grid-area: footer; }
-.item6 { grid-area: foot; }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header'
-    'pic main main'
-    'pic footer footer' 
-    'pic foot foot';
-  gap: 10px;
-  padding: 10px;
+  display: block;
+  width: 50%;
 }
 
+.movie-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.movie-data-container {
+  display: flex;
+  flex-direction: column;
+}
