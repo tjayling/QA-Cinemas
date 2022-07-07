@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const Movies = new Schema(
     {
+        _id: {type: String, required: true},
         id:{type: Number, required: true },
         title: { type: String, required: true },
         description: { type: String, required: true },
