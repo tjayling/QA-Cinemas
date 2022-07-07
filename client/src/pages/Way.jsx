@@ -1,4 +1,4 @@
-import './WayStyle.css'
+import './Style/WayStyle.css'
 import React from 'react'
 
 function Way() {
