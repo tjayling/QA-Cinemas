@@ -1,39 +1,51 @@
-import React, { Component } from "react";
-import { useState } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
+import Result from "./Result";
+const axios = require("axios");
 
-class SearchBar extends Component {
-  searchInput;
-  movies;
-  constructor() {
-    super()
-    this.movies = [
-      { name: "Matilda", genre: "Children's film" },
-      { name: "Pulp Fiction", genre: "Crime" },
-      { name: "The Room", genre: "Drama" },
-      { name: "Top Gun", genre: "Action" },
-      { name: "Goodfellas", genre: "Mafia" },
-    ];
-  }
-  handleChange(e) {
-    e.preventDefault();
-    this.searchInput = e.target.value;
-    if (this.searchInput.length > 0) {
-      this.movies.filter((movie) => {
-        return movie.name.match(this.searchInput);
-      });
+const SearchBar = () => {
+  const [movieData, setMovieData] = useState([]);
+  const [movieResults, setMovieResults] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/movies")
+      .then((response) => setMovieData(response.data.data))
+      .catch((error) => console.error(error));
+  }, []);
+
+  function handleChange(event) {
+    event.preventDefault();
+    let movieElements = [];
+    let showMovies = [];
+
+    for (let movie of movieData) {
+      if (
+        (movie.title.toLowerCase().includes(event.target.value) ||
+          movie.description.toLowerCase().includes(event.target.value) ||
+          movie.actors.toLowerCase().includes(event.target.value)) &&
+        !showMovies.includes(movie)
+      )
+        showMovies.push(movie);
     }
+
+    for (let movie of showMovies) {
+      movieElements.push(<Result movie={movie} key={movie._id} />);
+    }
+
+    setMovieResults(movieElements);
   }
-  render() {
-    return (
-      <div>
-        <input
-          type="search"
-          placeholder="Search"
-          onSubmit={this.handleChange}
-        />
-        <p> {this.searchInput}</p>
+
+  return (
+    <div>
+      <input type="search" placeholder="Search" onChange={handleChange} />
+      <div
+        style={{ position: "absolute", backgroundColor: "white", zIndex: "50" }}
+      >
+        {movieResults}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
 export default SearchBar;

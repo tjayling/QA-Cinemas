@@ -1,5 +1,5 @@
 import React from "react";
- import { useLocation, Link } from "react-router-dom";
+ import { useLocation } from "react-router-dom";
 
 
 
@@ -33,10 +33,10 @@ const Viewing = () => {
     <button type="button" class="btn btn-black dropdown-toggle" data-bs-toggle="dropdown">Tickets</button>
     <div class="dropdown-menu">
         <div class="dropdown-header">Cinema Tickets</div>
-        <a href="#" class="dropdown-item">Adult</a>
-        <a href="#" class="dropdown-item">Children</a>
-        <a href="#" class="dropdown-item">Student</a>
-        <a href="#" class="dropdown-item">Senior</a> 
+        <a  class="dropdown-item">Adult</a>
+        <a  class="dropdown-item">Children</a>
+        <a  class="dropdown-item">Student</a>
+        <a  class="dropdown-item">Senior</a> 
         </div>
         <div>
        <select id="tickets"> <option value="Select">  </option> <option value="Adult"> Adult </option> <option value="Children"> Children</option> <option value="Student"> Student</option> <option value="Senior"> Senior</option></select>
