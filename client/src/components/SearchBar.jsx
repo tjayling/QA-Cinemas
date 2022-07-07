@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Result from "./Result";
+import "../pages/Style/SearchBar.css"
 const axios = require("axios");
 
 const SearchBar = () => {

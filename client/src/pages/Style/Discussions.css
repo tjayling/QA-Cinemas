@@ -1,0 +1,91 @@
+div {
+    border-radius: 10px;
+}
+
+.main-containers {
+  background-color: #ccc;
+  border: 2px groove #eee;
+  margin: 0 20px 20px 20px;
+}
+
+.forum-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #bbb;
+  border: 2px groove #ddd;
+  margin: 0 20px;
+  width: fit-content;
+}
+
+.movie-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0 20px 0;
+  margin-left: 20px;
+}
+
+.comments-container {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.comment-container {
+  background-color: #aaa;
+  border: 2px groove #ccc;
+  padding: 0 10px 0 10px;
+  margin-top: 5px;
+}
+
+.comment-username {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.comment-text {
+  text-align: left;
+}
+
+.stars {
+  display: inline;
+  font-size: 25px;
+  color: gold;
+  padding-left: 10px;
+}
+
+.discussion-form {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.discussion-input {
+  display: block;
+  width: auto;
+  margin: 5px;
+  background-color: #bbb;
+  border: 2px groove #ccc;
+  border-radius: 5px;
+}
+
+::placeholder {
+    color: #333;
+}
