@@ -1,0 +1,15 @@
+.result-container {
+  padding: 5px;
+  margin: 5px;
+}
+.result-container:hover {
+  color: black;
+  background-color: #ccc;
+}
+.result-link {
+  color: black;
+  text-decoration: none;
+}
+.link-text {
+  margin: 0;
+}

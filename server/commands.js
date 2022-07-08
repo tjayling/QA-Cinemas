@@ -500,7 +500,7 @@ const commands = () => {
       id: 2,
       username: "Emily Pink",
       rating: 8,
-      comment: "The film's score is great",
+      comment: "The film is brilliant, so action packed!",
       movie: {
         $ref: "movies",
         $id: "1",
@@ -533,7 +533,7 @@ const commands = () => {
       id: 5,
       username: "Uma Thurman",
       rating: 8,
-      comment: "This film id amazing. Obviously, I'm in it!",
+      comment: "This film is amazing. Obviously, I'm in it!",
       movie: {
         $ref: "movies",
         $id: "5",
