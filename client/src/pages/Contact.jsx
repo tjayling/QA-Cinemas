@@ -10,56 +10,67 @@ const Contact = () => {
       </p>
 
       <h2>Contact us via email</h2>
-      <form 
-      className="discussion-form"
-      style={{width:"50%" }}
-        action="https://formsubmit.co/87393ec81fcbba0211622f33c93f1126"
-        method="POST"
-      >
-        <label htmlFor="fname">First Name</label>
-        <input
-          type="text"
-          className="form-control"
-          aria-describedby="emailHelp"
-          placeholder="Your name.."
-        ></input>
+      <div className="center">
 
-        <label htmlFor="lname">Last Name</label>
-        <input
-          type="text"
-          className="form-control"
-          id="lname"
-          name="lastname"
-          placeholder="Your last name.."
-        ></input>
+        <form
+        className="form-container main-containers"
+          action="https://formsubmit.co/87393ec81fcbba0211622f33c93f1126"
+          method="POST"
+        >
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          className="form-control"
-          name="email"
-          placeholder="Your email address..."
-        ></input>
+          <label htmlFor="fname">First Name</label>
+          <input
+            type="text"
+            className="form-control"
+            aria-describedby="emailHelp"
+            placeholder="Your name.."
+          />
 
-        <input
-          type="hidden"
-          className="form-control"
-          name="_subject"
-          value="New submission!"
-        ></input>
 
-        <label htmlFor="Content">Enter Content: </label>
-        <input
-          type="textarea"
-          className="form-control"
-          name="textValue"
-          placeholder="Enter content here"
-        ></input>
 
-        <button type="submit" className="btn btn-primary">
-          Send
-        </button>
-      </form>
+          <label htmlFor="lname">Last Name</label>
+          <input
+            type="text"
+            className="form-control"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            name="email"
+            placeholder="Your email address..."
+          />
+
+
+          <input
+            type="hidden"
+            className="form-control"
+            name="_subject"
+            value="New submission!"
+          />
+
+
+          <label htmlFor="Content">Enter Content: </label>
+          <input
+            className="form-control"
+            type="textarea"
+            name="textValue"
+            placeholder="Enter content here"
+          />
+
+          <div className="center">
+            <button type="submit" className="discussion-input">
+              Send
+            </button>
+          </div>
+
+        </form>
+      </div>
+
       <h2>Contact via mail</h2>
       <p>123 oneroad</p>
       <p>twocity</p>
