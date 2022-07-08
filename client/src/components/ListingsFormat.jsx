@@ -22,7 +22,9 @@ const ListingsFormat = () => {
   return movieData.map((movie) => {
     return (
       <div style={{ margin: "25px" }} key={movie._id}>
+                  <div className="reviews-container main-containers"> 
         <h2>{movie.title}</h2>
+        </div>
         <img src={movie.img_link} alt={`${movie.title} cover`} width="200px" />
         {listingData.map((item) => {
           if (item.movie.$id === movie._id) {
@@ -44,10 +46,12 @@ const ListingsFormat = () => {
                   </Link>
                 </div>
               </div>
+              
             );
           }
         })}
       </div>
+
     );
   });
 };

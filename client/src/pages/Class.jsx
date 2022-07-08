@@ -5,7 +5,7 @@ const Class = () => {
   return (
     <div>
       <div>
-        <h1>Classification</h1>
+        <h1 className="page-title">Classification</h1>
         <p>
           The purpose of the British Board of Film Classification, besides
           vetting films to make sure that they don't contain material deemed
@@ -19,7 +19,8 @@ const Class = () => {
       </div>
 
       <div className="row justify-content-center">
-        <div className="classificaiton-container">
+      <div class="col-4">
+          <div className="reviews-container main-containers"> 
           <h2>Uc</h2>
           <p>
             A sub classification of U and particularly suitable for pre-school
@@ -31,16 +32,20 @@ const Class = () => {
             className="classificaiton-img"
           ></img>
         </div>
+        </div>
 
-        <div className="classificaiton-container">
+        <div class="col-4">
+          <div className="reviews-container main-containers"> 
           <h2>U</h2>
           <p>
             Stands for "Universal" and denotes that is is suitable for everyone.
           </p>
           <img src="U.png" alt="Kids movies" className="classificaiton-img" />
         </div>
+        </div>
 
-        <div className="classificaiton-container">
+        <div class="col-4">
+          <div className="reviews-container main-containers"> 
           <h2>PG</h2>
           <p>
             Stands for "Parental Guidance" and denotes that the movie contains
@@ -52,8 +57,10 @@ const Class = () => {
             className="classificaiton-img"
           ></img>
         </div>
+        </div>
 
-        <div className="classificaiton-container">
+        <div class="col-4">
+          <div className="reviews-container main-containers"> 
           <h2>12</h2>
           <p>
             Contains material which is unstuable for children but appropriate
@@ -65,8 +72,10 @@ const Class = () => {
             className="classificaiton-img"
           ></img>
         </div>
+        </div>
 
-        <div className="classificaiton-container">
+        <div class="col-4">
+          <div className="reviews-container main-containers"> 
           <h2>12A</h2>
           <p>Chicldren under 12 can watch with accompanied by an adult</p>
           <img
@@ -75,8 +84,10 @@ const Class = () => {
             className="classificaiton-img"
           ></img>
         </div>
+        </div>
 
-        <div className="classificaiton-container">
+          <div class="col-4">
+          <div className="reviews-container main-containers"> 
           <h2>15</h2>
           <p>Stuiable for young adults</p>
           <img
@@ -85,8 +96,10 @@ const Class = () => {
             className="classificaiton-img"
           ></img>
         </div>
+        </div>
 
-        <div className="classificaiton-container">
+        <div class="col-4">
+          <div className="reviews-container main-containers"> 
           <h2>18</h2>
           <p>Suitable for anyone over the age of 18.</p>
           <img
@@ -96,6 +109,7 @@ const Class = () => {
           ></img>
         </div>
       </div>
+    </div>
     </div>
   );
 };

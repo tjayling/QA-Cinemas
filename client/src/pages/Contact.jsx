@@ -4,13 +4,15 @@ import "./Style/Global.css";
 const Contact = () => {
   return (
     <div>
-      <h1> Contact us</h1>
+      <h1 className="page-title"> Contact us</h1>
       <p>
         Welcome to our contact page, here you can contact us for any inquires
       </p>
 
       <h2>Contact us via email</h2>
-      <form
+      <form 
+      className="discussion-form"
+      style={{width:"50%" }}
         action="https://formsubmit.co/87393ec81fcbba0211622f33c93f1126"
         method="POST"
       >

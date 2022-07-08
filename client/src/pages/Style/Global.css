@@ -14,6 +14,9 @@ body {
 .classificaiton-img {
   width: 100px;
   height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .classificaiton-container {
@@ -36,4 +39,8 @@ body {
 .movie-data-container {
   display: flex;
   flex-direction: column;
+}
+
+.email{
+  width: 50%;
 }

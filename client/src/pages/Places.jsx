@@ -5,7 +5,7 @@ function Places() {
   return (
     <body>
       <div>
-        <h1>Places Near by</h1>
+        <h1 className="page-title" >Places Near by</h1>
         <p>Plan your amazing day out with these fanastic resurants and activities near by. </p>
         <h1>Where are we?</h1>
         <p>Find us on the map below <Link to="/way">Click here for directions</Link></p>
@@ -23,51 +23,70 @@ function Places() {
 
         <div class="row justify-content-center">
           <div class="col-4">
+          <div className="reviews-container main-containers"> 
             <h2>Mcdonald's </h2>
             <p>Our mission is to make delicious feel-good moments easy for everyone.</p>
             <img src="Mcdonalds.png" alt="Macdonalds near me" witdh='200' height='300' class="center"></img>
             <h3>Discount</h3>
             <p>Buy an adult meal get a free kids meal, with vailid family ticket</p>
-          </div>
+            <br></br>
+            <br></br>
+            </div>
+            </div>
 
-          <div class="col-4"><h2>KFC</h2>
+          <div class="col-4">
+          <div className="reviews-container main-containers"> 
+            <h2>KFC</h2>
             <p>Finger Lickin' Good</p>
             <img src="KFC.png" alt="Fast Food near me" witdh='200' height='300' class="center"></img>
             <h3>Discount</h3>
             <p>Family bucket for £7.99 with vaiid ticket</p>
             <p>Students free addon if you spend over £3</p>
           </div>
+          </div>
 
-          <div class="col-4"><h2>Burger king</h2>
+          <div class="col-4">
+          <div className="reviews-container main-containers"> 
+            <h2>Burger king</h2>
             <p>If you ask us, it just tastes better</p>
             <img src="BK.png" alt="Burgers" witdh='200' height='300' class="center"></img>
             <h3>Discount</h3>
             <p>Two for Tuesdays</p>
+            <br></br>
+            <br></br>
           </div>
         </div>
-
+        </div>
         <br></br>
         <h1> Things to do</h1>
         <p>Enjoy these activities </p>
 
         <div class="row justify-content-center">
           <div class="col-4">
+          <div className="reviews-container main-containers"> 
             <h2>Art Gallery </h2>
             <p>Fantasic collection of cotempry art, pop and movie memorabilia </p>
             <img src="AG.png" alt="Macdonalds near me" witdh='200' height='300' class="center"></img>
-
+            <br></br>
+            </div>
           </div>
 
-          <div class="col-4"><h2>Hollywood Bowling</h2>
+          <div class="col-4">
+          <div className="reviews-container main-containers"> 
+            <h2>Hollywood Bowling</h2>
             <p>Play a quick game of 10 pin or have fun in the arcade</p>
             <img src="bowl.png" alt="Macdonalds near me" witdh='200' height='300' class="center"></img>
-
+            <br></br>
+            </div>
           </div>
 
-          <div class="col-4"><h2>Crazy Golf</h2>
+          <div class="col-4">
+          <div className="reviews-container main-containers"> 
+            <h2>Crazy Golf</h2>
             <p>Fancy a game of golf?</p>
             <img src="CG.png" alt="Macdonalds near me" witdh='300' height='300' class="center"></img>
-
+            <br></br>
+            </div>
           </div>
         </div>
       </div>

@@ -49,7 +49,7 @@ else if(day === 6 && t>"08:00"  && t <"23:59"){
 
     return (
         <div>
-            <h1>Opening Times</h1>
+            <h1 className="page-title">Opening Times</h1>
             <h1>{theday}</h1>
             <h2>The local time is {hour} : {minute}</h2>
 

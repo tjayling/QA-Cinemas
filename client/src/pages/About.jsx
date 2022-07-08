@@ -11,7 +11,7 @@ const About = () => {
         <div className="row">
             <div className="col">
                 <center>
-                    <h2> About  QA Cinema </h2>
+                    <h2 className="page-title"> About  QA Cinema </h2>
 
                     QA cinema was founded by it's five amazing founders Tom Ayling, Jasmin Willis, Guv Mehat, Rayyana Suleiman and Fowsia Bilkeer. 
                     Over the last few years it has become one of the leading cinema groups in the United Kingdom as it continues to provide a cinema experience like never before. <br/>
