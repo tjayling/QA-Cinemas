@@ -1,0 +1,36 @@
+.payment{
+
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    
+}
+
+.tickets{
+    padding: 33px;
+    align-items: center;
+    justify-content: center;
+    margin: 33px;
+}
+
+h1 {
+    padding: 15px;
+    align-items: center;
+    margin: 25px;
+}
+
+.tickets{
+    border: 5px;
+    border-color:darkgray;
+    justify-content: center;
+    border-style: outset;
+}
+
+.movie-pic{
+    justify-content: center;
+}
+
+.confirm-butt{
+    justify-content: center;
+}
