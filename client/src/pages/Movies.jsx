@@ -1,9 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MovieFormat from "../components/MovieFormat.jsx";
-const axios = require("axios");
 
 const Movies = () => {
-  return <div>{MovieFormat()}</div>;
+  return (
+    <div>
+      <h1 className="page-title">Movies</h1>
+      {MovieFormat()}
+      <Link to="/classification">Our guide to age ratings</Link>
+    </div>
+  );
 };
 
 export default Movies;

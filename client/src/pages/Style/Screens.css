@@ -1,0 +1,15 @@
+style {
+   background-size: cover;
+   background-position: 'center';
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.primary {
+    font: optional;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:dimgrey;
+}
+
+

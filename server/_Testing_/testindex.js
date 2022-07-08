@@ -16,6 +16,7 @@ const commentRouter = require("../routes/comment-route");
 const bookingRouter = require("../routes/bookingRoutes");
 const viewingRouter = require("../routes/viewingsRoutes");
 
+
 myapp.use(screenRouter);
 myapp.use(movieRouter);
 myapp.use(discussionRouter);
