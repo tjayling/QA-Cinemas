@@ -7,7 +7,7 @@ const Result = ({ movie }) => {
       <a
         className="result-link"
         href={
-          "https://en.wikipedia.org/wiki/" + movie.title.replace(/\s+/g, "_")
+          `http://localhost:3001/movie/${movie._id}`
         }
         target="_blank"
       >

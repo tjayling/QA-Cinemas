@@ -13,8 +13,9 @@ import Places from "./pages/Places.jsx";
 import Way from "./pages/Way.jsx";
 import Class from "./pages/Class.jsx";
 import Open from "./pages/Open.jsx";
-import Payment from "./pages/Payment";
-
+import Payment from "./pages/Payment.jsx";
+import Movie from "./pages/Movie.jsx";
+import DeleteComment from "./pages/DeleteComment.jsx";
 
 const Main = () => {
   return (
@@ -34,6 +35,8 @@ const Main = () => {
         <Route exact path="/opening-times" element={<Open />} />
         <Route exact path="/payment" element={<Payment />} />
         <Route exact path="/viewing" element={<Viewing />} />
+        <Route exact path="/movie/:id" element={<Movie />} />
+        <Route exact path="forum/delete-comment/:id" element={<DeleteComment />} />
       </Routes>
     </div>
   );

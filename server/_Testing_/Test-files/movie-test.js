@@ -93,9 +93,12 @@ mocha.describe("CRUD testing", () => {
             chai.expect(res.status).to.equal(200);
             chai.expect(res.body.success).to.equal(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
            ;
 =======
 >>>>>>> 45d5797eb72e87d846f6ad036fab9b04c7b24f8f
+=======
+>>>>>>> bfd04ba0929685e8e8f335282ccb6df77176bb3c
             done();
           });
       });
