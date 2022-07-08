@@ -8,7 +8,7 @@ const Listings = () => {
       <div className="center" style={{ display: "flex" }}>
         {ListingsFormat()}
       </div>
-      </div>
+     </div>
   );
 };
 

@@ -10,13 +10,13 @@ createBookings = (req, res) => {
         })
     }
 
-    const Bookings = new Bookings(body)
+    const bookings = new Bookings(body)
 
-    if (!Bookings) {
+    if (!bookings) {
         return res.status(400).json({ success: false, error: err })
     }
 
-    Bookings
+    bookings
         .save()
         .then(() => {
             return res.status(201).json({
@@ -34,7 +34,7 @@ createBookings = (req, res) => {
 }
 
 getBookingsById = async (req, res) => {
-    await Bookings.findOne({ _id: req.params.id }, (err, Bookings) => {
+    await Bookings.findOne({ id: req.params.id }, (err, Bookings) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }

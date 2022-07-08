@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-
-
 
 function App() {
     var d = new Date(), 
@@ -81,3 +79,4 @@ else if(day === 6 && t>"08:00"  && t <"23:59"){
 }
 
 export default App;
+

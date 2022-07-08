@@ -1,7 +1,7 @@
-import './Style/WayStyle.css'
-import React from 'react'
+import "./Style/WayStyle.css";
+import React from "react";
 
-function Way() {
+const Way = () => {
   return (
     <div>
       <h1 className="page-title">How to Get here</h1>
@@ -41,10 +41,8 @@ function Way() {
         loading="lazy"
         class="center"
       ></iframe>
-
-
     </div>
-  )
-}
+  );
+};
 
 export default Way;

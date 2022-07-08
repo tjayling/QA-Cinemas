@@ -6,5 +6,6 @@ const router = express.Router()
 
 router.get('/Viewings/:id', ViewingsCtrl.getViewingsById)
 router.get('/Viewings', ViewingsCtrl.getViewings)
+router.post('/Viewings/create', ViewingsCtrl.createViewings)
 
 module.exports = router

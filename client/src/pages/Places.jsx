@@ -1,7 +1,7 @@
-import './Style/Global.css';
+import "./Style/Global.css";
 import { Link } from "react-router-dom";
 
-function Places() {
+const Places = () => {
   return (
     <body>
       <div>
@@ -88,10 +88,11 @@ function Places() {
             <br></br>
             </div>
           </div>
+
         </div>
       </div>
-    </body>
+    </div>
   );
-}
+};
 
 export default Places;
