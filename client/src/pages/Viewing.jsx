@@ -125,7 +125,6 @@ const Viewing = () => {
             </select>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );

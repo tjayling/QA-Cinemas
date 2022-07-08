@@ -1,0 +1,14 @@
+.movie-container {
+  text-align: left;
+}
+.movie-cover-img {
+  margin: 20px;
+}
+.movie-title {
+  text-align: left;
+  margin: 0;
+}
+.movie-data {
+  margin-left: 20px;
+  text-align: left;
+}
