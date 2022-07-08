@@ -13,11 +13,19 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "mocha": "^10.0.0",
     "mongoose": "^6.4.0",
+<<<<<<< HEAD
     "nodemon": "^2.0.19",
+=======
+    "nodemon": "^2.0.18",
+    "nyc": "^15.1.0",
+>>>>>>> 45d5797eb72e87d846f6ad036fab9b04c7b24f8f
     "stripe": "^9.11.0",
     "uuid": "^8.3.2"
   }

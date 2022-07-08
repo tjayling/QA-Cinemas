@@ -13,11 +13,21 @@ const screenRouter = require("../routes/screenRoutes");
 const movieRouter = require("../routes/movieRoutes");
 const discussionRouter = require("../routes/discussion-route");
 const commentRouter = require("../routes/comment-route");
+<<<<<<< HEAD
+=======
+const bookingRouter = require("../routes/bookingRoutes");
+const viewingRouter = require("../routes/viewingsRoutes");
+>>>>>>> 45d5797eb72e87d846f6ad036fab9b04c7b24f8f
 
 myapp.use(screenRouter);
 myapp.use(movieRouter);
 myapp.use(discussionRouter);
 myapp.use(commentRouter);
+<<<<<<< HEAD
+=======
+myapp.use(bookingRouter);
+myapp.use(viewingRouter);
+>>>>>>> 45d5797eb72e87d846f6ad036fab9b04c7b24f8f
 
 
 // myapp.use("*", (req, res, next) => next({ status: 404, message: "Invalid url" })); // catches 404's
