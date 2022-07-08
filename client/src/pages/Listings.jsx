@@ -5,8 +5,10 @@ const Listings = () => {
   return (
     <div>
       <h1 className="page-title">Listings</h1>
-      <div style={{ display: "flex" }}>{ListingsFormat()}</div>
-    </div>
+      <div className="center" style={{ display: "flex" }}>
+        {ListingsFormat()}
+      </div>
+     </div>
   );
 };
 
