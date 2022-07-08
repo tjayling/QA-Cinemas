@@ -4,13 +4,21 @@ import MovieDatalist from "../components/MovieDatalist.jsx";
 import { useState } from "react";
 import Form from "../components/DiscussionsForm.jsx";
 import CommentsFormat from "../components/CommentsFormat.jsx";
+import "../pages/Style/Discussions.css";
 
 const Forum = () => {
   const [fetchData, setFetchData] = useState(true);
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <Form getData={setFetchData} fetchData={fetchData} />
-      <div>{CommentsFormat(setFetchData, fetchData)}</div>
+    <div className="forum-container">
+      <h1 className="page-title">Movie Reviews</h1>
+      <div className="form-container main-containers">
+        <h2>Leave a review</h2>
+        <Form getData={setFetchData} fetchData={fetchData} />
+      </div>
+      <div className="reviews-container main-containers">
+        <h2>Recent Reviews</h2>
+        {CommentsFormat(setFetchData, fetchData)}
+      </div>
     </div>
   );
 };

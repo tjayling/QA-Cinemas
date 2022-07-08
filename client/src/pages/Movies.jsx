@@ -1,17 +1,19 @@
 import React from "react";
-import Footer from "../components/Footer"
-
-const movies = () => {
-  return <div>movies
-    
-  <Footer/>
-  </div>;
+import { Link } from "react-router-dom";
 import MovieFormat from "../components/MovieFormat.jsx";
-const axios = require("axios");
 
 const Movies = () => {
-  return <div>{MovieFormat()}</div>;
-  <Footer/>
+  return (
+    <div>
+      <h1>Movies</h1>
+      {MovieFormat()}
+      <h2>Classification</h2>
+      <p>
+        For information about the different classifcation guide click{" "}
+        <Link to="/classification">here</Link>
+      </p>
+    </div>
+  );
 };
 
 export default Movies;
