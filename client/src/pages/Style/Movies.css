@@ -1,5 +1,8 @@
 .movie-container {
   text-align: left;
+  margin-top: 200px;
+  display: flex;
+  align-items: flex-start;
 }
 .movie-cover-img {
   margin: 20px;
@@ -11,4 +14,9 @@
 .movie-data {
   margin-left: 20px;
   text-align: left;
+}
+
+.movie-data-container {
+  display: flex;
+  flex-direction: column;
 }

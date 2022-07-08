@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function App() {
+const Footer = () => {
   return (
     <div
-      bgColor="light"
       className="text-center text-lg-start text-muted"
       style={{ position: "-webkit-sticky", left: 0, bottom: 0, right: 0 }}
     >
@@ -14,24 +13,36 @@ export default function App() {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase text-center fw-bold mb-4">Pages</h6>
               <p>
-                <Link className="link-secondary" to="/">Home</Link>
+                <Link className="link-secondary" to="/">
+                  Home
+                </Link>
               </p>
               <p>
-                <Link className="link-secondary" to="/movies">Movies</Link>
+                <Link className="link-secondary" to="/movies">
+                  Movies
+                </Link>
               </p>
               <p>
-                <Link className="link-secondary" to="/listings">Playing Now</Link>
+                <Link className="link-secondary" to="/listings">
+                  Playing Now
+                </Link>
               </p>
               <p>
-                <Link className="link-secondary" to="/about">About Us</Link>
+                <Link className="link-secondary" to="/about">
+                  About Us
+                </Link>
               </p>
               <p>
-                <Link className="link-secondary" to="/forum">Discussions</Link>
+                <Link className="link-secondary" to="/forum">
+                  Discussions
+                </Link>
               </p>
             </div>
 
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 className="text-uppercase text-center fw-bold mb-4">Contact</h6>
+              <h6 className="text-uppercase text-center fw-bold mb-4">
+                Contact
+              </h6>
               <p>
                 <i className="fas fa-home me-3"></i> 123 Oneroad, Two City,
                 AB123 4CD
@@ -57,4 +68,6 @@ export default function App() {
       </div>
     </div>
   );
-}
+};
+
+export default Footer;

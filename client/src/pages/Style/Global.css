@@ -26,14 +26,3 @@ body {
   display: block;
   width: 50%;
 }
-
-.movie-container {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-
-.movie-data-container {
-  display: flex;
-  flex-direction: column;
-}

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 const axios = require("axios");
 
-const DeleteComment = ({ getData }) => {
+const DeleteComment = () => {
   const { id } = useParams();
   useEffect(() => {
     axios

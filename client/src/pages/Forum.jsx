@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer"
-import MovieDatalist from "../components/MovieDatalist.jsx";
 import { useState } from "react";
 import Form from "../components/DiscussionsForm.jsx";
 import CommentsFormat from "../components/CommentsFormat.jsx";
